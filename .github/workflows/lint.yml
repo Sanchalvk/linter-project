@@ -37,6 +37,14 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurin'
+      - name: Download Checkstyle
+        run: |
+          wget https://github.com/checkstyle/checkstyle/releases/download/checkstyle-<version>/checkstyle-<version>.jar -O checkstyle.jar
+          # Replace <version> with the actual version number
+
+      - name: Run Checkstyle
+        run: |
+          java -jar checkstyle.jar -c /google_checks.xml src/main/java/**/*.java
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
