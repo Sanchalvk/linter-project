@@ -37,10 +37,11 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurin'
+      
       - name: Download Checkstyle
         run: |
-          wget https://github.com/checkstyle/checkstyle/releases/download/checkstyle-<version>/checkstyle-<version>.jar -O checkstyle.jar
-          # Replace <version> with the actual version number
+          wget https://github.com/checkstyle/checkstyle/releases/download/checkstyle-8.45/checkstyle-8.45-all.jar -O checkstyle.jar
+          # Replace 8.45 with the actual version number you want to use
 
       - name: Run Checkstyle
         run: |
