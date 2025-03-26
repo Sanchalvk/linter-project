@@ -43,9 +43,13 @@ jobs:
           wget https://github.com/checkstyle/checkstyle/releases/download/checkstyle-8.45/checkstyle-8.45-all.jar -O checkstyle.jar
           # Replace 8.45 with the actual version number you want to use
 
-    #  - name: Run Checkstyle
-     #   run: |
-     #     java -jar checkstyle.jar -c /google_checks.xml src/main/java/**/*.java
+      - name: Run Checkstyle
+        run: |
+          mvn clean checkstyle:checkstyle -Dcheckstyle.config.file=check
+      
+      - name: Run PMD 
+        run: | 
+          mvn clean pmd:pmd -Dpmd.ruleset=pmd.xml
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
