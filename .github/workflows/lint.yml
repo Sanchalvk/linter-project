@@ -51,11 +51,11 @@ jobs:
       - name: Run PMD
         run: mvn pmd:check
 
-      - name: Upload Checkstyle and PMD reports
-        uses: actions/upload-artifact@v2
-        with:
-          name: checkstyle-pmd-reports
-          path: target/checkstyle-*.xml,target/pmd.xml
+  ##    - name: Upload Checkstyle and PMD reports
+    #    uses: actions/upload-artifact@v2
+     #  with:
+      #    name: checkstyle-pmd-reports
+     #     path: target/checkstyle-*.xml,target/pmd.xml
     
 
       # Runs a set of commands using the runners shell
