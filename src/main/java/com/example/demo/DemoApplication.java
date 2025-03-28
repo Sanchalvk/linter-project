@@ -9,7 +9,7 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 		String message = "Hello, world!"; // Line is too long, use single quotes j=
 		if (args.length > 0) {
-            System.out.println(args[]); // PMD error: Hardcoded value in condition
+            System.out.println(args[0]); // PMD error: Hardcoded value in condition
 			
         }
 		double x=10/2;
