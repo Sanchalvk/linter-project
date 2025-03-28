@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -59,30 +58,23 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.15.0</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase> <!-- Bind PMD to the 'validate' phase -->
+                        <goals>
+                            <goal>pmd</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <rulesets>
+                        <ruleset>/path/to/your/pmd.xml</ruleset> <!-- Specify your PMD ruleset -->
+                    </rulesets>
+                </configuration>
             </plugin>
         </plugins>
     </build>
-
-  <plugins>
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-pmd-plugin</artifactId>
-      <version>3.15.0</version> <!-- Use the desired version -->
-      <executions>
-        <execution>
-          <phase>validate</phase> <!-- Bind PMD to the 'validate' phase -->
-          <goals>
-            <goal>pmd</goal>
-          </goals>
-        </execution>
-      </executions>
-      <configuration>
-        <rulesets>
-          <ruleset>/path/to/your/pmd.xml</ruleset> <!-- Specify your PMD ruleset -->
-        </rulesets>
-      </configuration>
-    </plugin>
-  </plugins>
-</build>
+</project>
