@@ -65,5 +65,33 @@
         </plugins>
     </build>
 
+
+    <build>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-pmd-plugin</artifactId>
+      <version>3.15.0</version> <!-- Use the desired version -->
+      <executions>
+        <execution>
+          <phase>validate</phase> <!-- Bind PMD to the 'validate' phase -->
+          <goals>
+            <goal>pmd</goal>
+          </goals>
+        </execution>
+      </executions>
+      <configuration>
+        <rulesets>
+          <ruleset>/path/to/your/pmd.xml</ruleset> <!-- Specify your PMD ruleset -->
+        </rulesets>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
+
+
+
+
+
 </project> <!-- Added the missing closing tag here -->
  
