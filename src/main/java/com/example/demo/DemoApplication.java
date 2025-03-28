@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class DemoApplication {
- 	public static void main(String[] args) {
+ 	public static void main(String[] args) { 
 		SpringApplication.run(DemoApplication.class, args);
 		String message = "Hello, world!"; // Line is too long, use single quotes j=
 		if (args.length > 0) {
