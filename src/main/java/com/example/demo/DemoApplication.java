@@ -12,8 +12,12 @@ public class DemoApplication {
             System.out.println(args[0]); // PMD error: Hardcoded value in condition
 			
         }
-		double x=10/2
+		double x=10/2;
 		System.out.println(x);
+
+		double y=2+8/2;
+		System.out.println(x);
+
 		
 
 		int unusedVariable = 10; // This variable is never use
