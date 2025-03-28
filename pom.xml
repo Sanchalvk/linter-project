@@ -71,7 +71,7 @@
                 </executions>
                 <configuration>
                     <rulesets>
-                        <ruleset>/path/to/your/pmd.xml</ruleset> <!-- Specify your PMD ruleset -->
+                        <ruleset>/home/runner/work/linter-project/linter-project/pmd.xml</ruleset> <!-- Specify your PMD ruleset -->
                     </rulesets>
                 </configuration>
             </plugin>
