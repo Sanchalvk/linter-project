@@ -45,11 +45,11 @@ jobs:
         run: |
           mvn clean checkstyle:checkstyle -Dcheckstyle.config.file=check
       
-     # - name: Run PMD 
-      #  run: | 
-       #   mvn clean pmd:pmd -Dpmd.ruleset=pmd.xml
-      - name: Run PMD
-        run: mvn pmd:check
+      - name: Run PMD 
+        run: | 
+         mvn clean pmd:pmd -Dpmd.ruleset=pmd.xml
+     # - name: Run PMD
+        #run: mvn pmd:check
 
   ##    - name: Upload Checkstyle and PMD reports
     #    uses: actions/upload-artifact@v2
