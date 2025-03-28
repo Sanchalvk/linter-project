@@ -73,7 +73,7 @@
       </executions>
       <configuration>
         <rulesets>
-          <ruleset>/path/to/custom/ruleset.xml</ruleset>
+          <ruleset>/home/runner/work/linter-project/linter-project/pom.xml</ruleset>
         </rulesets>
       </configuration>
     </plugin>
