@@ -13,6 +13,8 @@ public class DemoApplication {
 			
         }
 		double x=10/2;
+		System.out.println('Q');
+
 		System.out.println(x);
 
 		double y=2+8/2;
