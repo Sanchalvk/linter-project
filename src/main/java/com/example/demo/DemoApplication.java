@@ -10,7 +10,19 @@ public class DemoApplication {
 		String message = "Hello, world!"; // Line is too long, use single quotes j=
 		if (args.length > 0) {
             System.out.println(args[0]); // PMD error: Hardcoded value in condition
-			int unusedVariable = 10; // This variable is never use
+			
+        }
+		double x=10/2
+		System.out.println(x);
+		
+
+		int unusedVariable = 10; // This variable is never use
+		
+		
+		try {
+            int result = 10 / 0;
+        } catch (ArithmeticException e) {
+            // Empty catch block
         }
         
         long timeLimit = 1000L;   //long 
