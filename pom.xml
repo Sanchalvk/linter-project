@@ -71,7 +71,12 @@
                 </executions>
                 <configuration>
                     <rulesets>
-                        <ruleset>/home/runner/work/linter-project/linter-project/pmd.xml</ruleset> <!-- Specify your PMD ruleset -->
+                        <!-- Use built-in PMD rulesets instead of a custom file -->
+                        <ruleset>rulesets/java/basic.xml</ruleset>
+                        <ruleset>rulesets/java/empty.xml</ruleset>
+                        <ruleset>rulesets/java/imports.xml</ruleset>
+                        <ruleset>rulesets/java/unnecessary.xml</ruleset>
+                        <ruleset>rulesets/java/unusedcode.xml</ruleset>
                     </rulesets>
                 </configuration>
             </plugin>
