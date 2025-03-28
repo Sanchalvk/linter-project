@@ -86,10 +86,3 @@
     </plugin>
   </plugins>
 </build>
-
-
-
-
-
-</project> <!-- Added the missing closing tag here -->
- 
