@@ -52,30 +52,4 @@
                 </executions>
                 <configuration>
                     <rulesets>
-                        <ruleset>pmd.xml</ruleset>
-                    </rulesets>
-                </configuration>
-            </plugin>
-
-            <!-- Checkstyle Plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>3.1.2</version>
-                <executions>
-                    <execution>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>checkstyle</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <!-- Correct location of the checkstyle.xml file -->
-                    <configLocation>checkstyle.xml</configLocation> <!-- Or specify the correct path -->
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
-</project>
+                        <
