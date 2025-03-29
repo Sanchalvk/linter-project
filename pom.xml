@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -8,8 +7,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.4</version> <!-- Ensure the correct Spring Boot version is specified here -->
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>3.4.4</version>
+        <relativePath/>
     </parent>
 
     <groupId>com.example</groupId>
@@ -22,19 +21,17 @@
     </properties>
 
     <dependencies>
-        <!-- Spring Boot starter web dependency -->
+        <!-- Spring Boot Starter Web Dependency -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <!-- No version needed because it's inherited from the parent POM -->
         </dependency>
 
-        <!-- Spring Boot starter test dependency -->
+        <!-- Spring Boot Starter Test Dependency -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-            <!-- No version needed because it's inherited from the parent POM -->
         </dependency>
     </dependencies>
 
@@ -74,7 +71,8 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <configLocation>checkstyle.xml</configLocation>
+                    <!-- Correct location of the checkstyle.xml file -->
+                    <configLocation>checkstyle.xml</configLocation> <!-- Or specify the correct path -->
                 </configuration>
             </plugin>
         </plugins>
