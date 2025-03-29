@@ -28,7 +28,7 @@ public class DemoApplication {
 		try {
             int result = 10 / 0;
         } catch (ArithmeticException e) {
-            // Empty catch block
+            // Empty catch block ndwqhh
         }
         
         long timeLimit = 1000L;   //long 
