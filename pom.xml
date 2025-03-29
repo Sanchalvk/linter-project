@@ -5,6 +5,13 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.4</version> <!-- Ensure the correct Spring Boot version is specified here -->
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
     <groupId>com.example</groupId>
     <artifactId>demo</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -15,15 +22,19 @@
     </properties>
 
     <dependencies>
-        <!-- Add your dependencies here -->
+        <!-- Spring Boot starter web dependency -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <!-- No version needed because it's inherited from the parent POM -->
         </dependency>
+
+        <!-- Spring Boot starter test dependency -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+            <!-- No version needed because it's inherited from the parent POM -->
         </dependency>
     </dependencies>
 
@@ -44,7 +55,6 @@
                 </executions>
                 <configuration>
                     <rulesets>
-                        <!-- Reference your custom PMD ruleset here -->
                         <ruleset>pmd.xml</ruleset>
                     </rulesets>
                 </configuration>
