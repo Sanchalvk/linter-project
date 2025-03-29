@@ -6,9 +6,39 @@
         
         <!-- JavadocMethod Module Configuration -->
         <module name="JavadocMethod">
-            <property name="allowedExceptions" value="java.lang.Throwable"/>
+            <property name="allowMissingParamTags" value="true"/> <!-- Allow missing @param tags -->
+            <property name="allowMissingThrowsTags" value="true"/> <!-- Allow missing @throws tags -->
+            <property name="allowMissingReturnTags" value="true"/> <!-- Allow missing @return tags -->
+            <property name="allowedExceptions" value="java.lang.Throwable"/> <!-- Allowed exceptions in Javadoc -->
         </module>
 
-        <!-- Add other Checkstyle modules here as needed -->
+        <!-- Example: Check for naming conventions -->
+        <module name="NamingConvention">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/> <!-- Example regex for variable names -->
+        </module>
+
+        <!-- Example: Check for whitespace -->
+        <module name="WhitespaceAround">
+            <property name="tokens" value="BINARY_OPERATOR, UNARY_OPERATOR, ASSIGN, COMMA, SEMI" />
+        </module>
+
+        <!-- Example: Check for magic numbers -->
+        <module name="MagicNumber">
+            <property name="ignoreNumbers" value="0,1,-1"/> <!-- Ignore common magic numbers -->
+        </module>
+
+        <!-- Example: Check for empty catch blocks -->
+        <module name="EmptyCatchBlock"/>
+
+        <!-- Example: Check for empty finally blocks -->
+        <module name="EmptyFinallyBlock"/>
+
+        <!-- Example: Check for empty if statements -->
+        <module name="EmptyIfStmt"/>
+
+        <!-- Example: Check for missing Javadoc comments -->
+        <module name="MissingJavadocType"/>
+        <module name="MissingJavadocMethod"/>
+
     </module>
 </module>
