@@ -8,6 +8,22 @@
         Custom ruleset for PMD analysis.
     </description>
 
+    <!-- Include basic rules -->
     <rule ref="rulesets/java/basic.xml"/>
+
+    <!-- Include design rules -->
     <rule ref="rulesets/java/design.xml"/>
+
+    <!-- Include specific rules -->
+    <rule ref="rulesets/java/javadoc.xml"/>
+
+    <!-- Example of configuring a specific rule -->
+    <rule ref="rulesets/java/basic.xml/UnusedLocalVariable">
+        <properties>
+            <property name="minimum" value="1"/>
+        </properties>
+    </rule>
+
+    <!-- Example of including a specific rule -->
+    <rule ref="rulesets/java/design.xml/LongMethod"/>
 </ruleset>
