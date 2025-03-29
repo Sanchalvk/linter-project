@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -16,28 +14,21 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>demo</name>
     <description>Demo project for Spring Boot</description>
-    <url>http://github.com/your-repo</url> <!-- Add a valid URL -->
-    
+    <url/>
+
     <licenses>
-        <license>
-            <name>The Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
+        <license/>
     </licenses>
-    
+
     <developers>
-        <developer>
-            <id>your-id</id>
-            <name>Your Name</name>
-            <email>your-email@example.com</email>
-        </developer>
+        <developer/>
     </developers>
-    
+
     <scm>
-        <connection>scm:git:git://github.com/your-repo.git</connection>
-        <developerConnection>scm:git:ssh://github.com/your-repo.git</developerConnection>
-        <tag>HEAD</tag>
-        <url>http://github.com/your-repo</url>
+        <connection/>
+        <developerConnection/>
+        <tag/>
+        <url/>
     </scm>
 
     <properties>
@@ -56,7 +47,7 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
-
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -66,20 +57,13 @@
 
     <build>
         <plugins>
-            <!-- Spring Boot Maven Plugin -->
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>3.4.4</version> <!-- Specify the version if needed -->
-            </plugin>
-
-            <!-- PMD Maven Plugin -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>pmd-maven-plugin</artifactId>
-                <version>3.15.0</version> <!-- You can check for the latest version -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.15.0</version>
                 <executions>
                     <execution>
+                        <phase>validate</phase> <!-- Bind PMD to the 'validate' phase -->
                         <goals>
                             <goal>pmd</goal>
                         </goals>
@@ -87,10 +71,15 @@
                 </executions>
                 <configuration>
                     <rulesets>
-                        <ruleset>pmd.xml</ruleset> <!-- Make sure pmd.xml is present -->
+                        <!-- Use built-in PMD rulesets instead of a custom file -->
+                        <ruleset>rulesets/java/basic.xml</ruleset>
+                        <ruleset>rulesets/java/empty.xml</ruleset>
+                        <ruleset>rulesets/java/imports.xml</ruleset>
+                        <ruleset>rulesets/java/unnecessary.xml</ruleset>
+                        <ruleset>rulesets/java/unusedcode.xml</ruleset>
                     </rulesets>
                 </configuration>
             </plugin>
         </plugins>
-    </build>
-</project>
+    </build> 
+</project>  
