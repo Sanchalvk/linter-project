@@ -7,7 +7,6 @@
         <!-- JavadocMethod Module Configuration -->
         <module name="JavadocMethod">
             <property name="allowedExceptions" value="java.lang.Throwable"/>
-            <property name="allowMultiple" value="true"/>
         </module>
 
         <!-- Add other Checkstyle modules here as needed -->
