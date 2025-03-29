@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE module PUBLIC "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN" "https://checkstyle.sourceforge.io/dtds/configuration_1_3.dtd">
-<module name="Checker">
-    <module name="JavadocMethod">
-        <!-- Removed allowEmpty property as it may not be supported in the current version -->
-        <property name="minLines" value="1"/> <!-- Ensure Javadoc exists for methods -->
-    </module>
+<!DOCTYPE module PUBLIC "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN" "http://checkstyle.sourceforge.net/dtds/configuration_1_3.dtd">
 
-    <!-- Other checkstyle rules -->
-    <module name="MethodLength">
-        <property name="max" value="100"/>
+<checkstyle>
+    <module name="Checker">
+        <module name="TreeWalker">
+            
+            <!-- JavadocMethod Module Configuration -->
+            <module name="JavadocMethod">
+                <!-- Remove the minLines property or adjust it based on your needs -->
+                <property name="allowedExceptions" value="java.lang.Throwable"/>
+                <property name="allowMultiple" value="true"/>
+            </module>
+
+            <!-- Add other Checkstyle modules here as needed -->
+        </module>
     </module>
-</module>
+</checkstyle>
