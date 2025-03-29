@@ -6,22 +6,9 @@
         
         <!-- JavadocMethod Module Configuration -->
         <module name="JavadocMethod">
-            <property name="allowMissingParamTags" value="true"/> <!-- Allow missing @param tags -->
-            <property name="allowMissingThrowsTags" value="true"/> <!-- Allow missing @throws tags -->
-            <property name="allowedExceptions" value="java.lang.Throwable"/> <!-- Allowed exceptions in Javadoc -->
+            <property name="allowedExceptions" value="java.lang.Throwable"/>
         </module>
 
         <!-- Add other Checkstyle modules here as needed -->
-        
-        <!-- Example: Check for naming conventions -->
-        <module name="NamingConvention">
-            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/> <!-- Example regex for variable names -->
-        </module>
-
-        <!-- Example: Check for whitespace -->
-        <module name="WhitespaceAround">
-            <property name="tokens" value="BINARY_OPERATOR, UNARY_OPERATOR, ASSIGN, COMMA, SEMI" />
-        </module>
-
     </module>
 </module>
