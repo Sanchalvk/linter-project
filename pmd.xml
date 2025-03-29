@@ -24,3 +24,7 @@
     </plugin>
   </plugins>
 </build>
+<file name="src/main/java/com/example/demo/SomeClass.java">
+    <violation rule="UnusedPrivateField" beginline="15" endline="15" msg="The field 'unusedVariable' is never used." />
+    <violation rule="AvoidMethodLength" beginline="20" endline="45" msg="This method is too long (should be <= 20 lines)." />
+</file>
