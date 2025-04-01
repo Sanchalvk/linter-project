@@ -19,7 +19,7 @@
     <url>http://www.example.com</url>
 
     <properties>
-        <java.version>17</java.version>
+        <java.version>21</java.version>
     </properties>
 
     <dependencies>
@@ -34,7 +34,7 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
-
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -44,26 +44,30 @@
 
     <build>
         <plugins>
-            <!-- Checkstyle Plugin Configuration -->
+            <!-- PMD Plugin Configuration -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>3.1.1</version>
-                <configuration>
-                    <!-- The location of your checkstyle.xml file -->
-                    <configLocation>checkstyle.xml</configLocation>
-                    <outputFile>target/checkstyle-result.xml</outputFile>
-                    <failOnViolation>true</failOnViolation>
-                </configuration>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.15.0</version>
                 <executions>
                     <execution>
+                        <phase>validate</phase> <!-- Bind PMD to the 'validate' phase -->
                         <goals>
-                            <goal>check</goal>
+                            <goal>pmd</goal>
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <rulesets>
+                        <!-- Use built-in PMD rulesets -->
+                        <ruleset>rulesets/java/basic.xml</ruleset>
+                        <ruleset>rulesets/java/empty.xml</ruleset>
+                        <ruleset>rulesets/java/imports.xml</ruleset>
+                        <ruleset>rulesets/java/unnecessary.xml</ruleset>
+                        <ruleset>rulesets/java/unusedcode.xml</ruleset>
+                    </rulesets>
+                </configuration>
             </plugin>
         </plugins>
     </build>
 </project>
-
