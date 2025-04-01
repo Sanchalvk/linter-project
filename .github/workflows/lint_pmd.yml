@@ -21,11 +21,18 @@ jobs:
       #  run: | 
        #   mvn clean checkstyle:checkstyle -Dcheckstyle.config.file=checkstyle.xml
 
+      #- name: Set up Maven
+       # uses: actions/setup-java@v2
+        #with:
+         # java-version: '11'
+          #maven-version: '3.8.1'
+
+
       - name: Set up Maven
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
-          java-version: '11'
-          maven-version: '3.8.1'
+          java-version: 17  # Same version as above (JDK 17)
+          distribution: temurin
 
       - name: Run PMD Analysis
         run: mvn pmd:pmd  # Run PMD via Maven
