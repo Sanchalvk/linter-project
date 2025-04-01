@@ -17,6 +17,21 @@ jobs:
           java-version: 17 
           distribution: temurin 
  
-      - name: Run Checkstyle 
-        run: | 
-          mvn clean checkstyle:checkstyle -Dcheckstyle.config.file=checkstyle.xml 
+     # - name: Run Checkstyle 
+      #  run: | 
+       #   mvn clean checkstyle:checkstyle -Dcheckstyle.config.file=checkstyle.xml
+
+      - name: Set up Maven
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          maven-version: '3.8.1'
+
+      - name: Run PMD Analysis
+        run: mvn pmd:pmd  # Run PMD via Maven
+
+      - name: Upload PMD Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: pmd-report
+          path: target/pmd.xml
