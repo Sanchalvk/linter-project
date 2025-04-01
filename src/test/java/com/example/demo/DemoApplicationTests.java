@@ -1,18 +1,13 @@
 package com.example.demo;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootApplication
-public class DemoApplication {
+@SpringBootTest
+class DemoApplicationTests {
 
-    public static void main(String[] args) {
-      SpringApplication.run(DemoApplication.class, args) // Error: indentation level is wrong
-    }
-    
-    public static void exampleMethod() {
-    int x = 0 as; // Error: variable declaration should follow naming conventions.
-    System.out.println(x);
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }
