@@ -10,6 +10,12 @@ public class DemoApplication {
 		String message = "Hello, world!"; // Line is too long, use single quotes j
 	
 	}
+	public class MyClass {
+    public void myMethod() { // Correct method naming
+        System.out.println("Hello");
+    }
+}
+
 
 }
  
