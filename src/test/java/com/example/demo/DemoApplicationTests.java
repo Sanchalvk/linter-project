@@ -7,11 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
 
     public static void main(String[] args) {
-      SpringApplication.run(DemoApplication.class, args); // Error: indentation level is wrong
+      SpringApplication.run(DemoApplication.class, args) // Error: indentation level is wrong
     }
     
     public static void exampleMethod() {
-    int x = 0; // Error: variable declaration should follow naming conventions.
+    int x = 0 as; // Error: variable declaration should follow naming conventions.
     System.out.println(x);
     }
 
