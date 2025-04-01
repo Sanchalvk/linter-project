@@ -2,6 +2,8 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import java.util.List;  // Unused import
+
 
 @SpringBootApplication
 public class DemoApplication {
@@ -10,7 +12,6 @@ public class DemoApplication {
 		String message = "Hello, world!" ; // Line is too long, use single quotes j
 	
 	}
-	import java.util.List;  // Unused import
 
 	public class MyClass {
     public void myMethod() {// Correct method naming  kdf
