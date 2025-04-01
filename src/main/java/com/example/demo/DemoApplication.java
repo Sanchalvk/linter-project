@@ -11,9 +11,9 @@ public class DemoApplication {
 	
 	}
 	public class MyClass {
-    public void myMethod() {{// Correct method naming
+    public void myMethod() {{// Correct method naming  kdf
         System.out.printlnHello");
-    }
+    
 }
 
 
