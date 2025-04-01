@@ -37,7 +37,6 @@ jobs:
       - name: Run PMD Analysis
         run: mvn pmd:pmd  # Run PMD via Maven
 
-      - name: Upload PMD report
-        uses: actions/upload-artifact@v2  # Make sure v2 is used
+      
         
     
