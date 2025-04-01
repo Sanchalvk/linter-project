@@ -1,6 +1,6 @@
 name: Lint Spring Boot Project 
 on: 
-push: 
+  push: 
     branches: [ main ] 
  
 jobs: 
