@@ -11,8 +11,8 @@ public class DemoApplication {
 	
 	}
 	public class MyClass {
-    public void myMethod() { // Correct method naming
-        System.out.println("Hello");
+    public void myMethod() {{// Correct method naming
+        System.out.printlnHello");
     }
 }
 
