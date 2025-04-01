@@ -7,11 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
  	public static void main(String[] args) { 
 		SpringApplication.run(DemoApplication.class, args);
-		String message = "Hello, world!"; // Line is too long, use single quotes j
+		String message = "Hello, world!" ; // Line is too long, use single quotes j
 	
 	}
 	public class MyClass {
-    public void myMethod() {{// Correct method naming  kdf
+    public void myMethod() {// Correct method naming  kdf
         System.out.println ("Hello");
     
 }
