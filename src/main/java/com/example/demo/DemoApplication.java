@@ -10,6 +10,8 @@ public class DemoApplication {
 		String message = "Hello, world!" ; // Line is too long, use single quotes j
 	
 	}
+	import java.util.List;  // Unused import
+
 	public class MyClass {
     public void myMethod() {// Correct method naming  kdf
         System.out.println ("Hello");
