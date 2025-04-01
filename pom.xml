@@ -60,6 +60,7 @@
                 <configuration>
                     <rulesets>
                         <!-- Use built-in PMD rulesets -->
+                        <ruleset>src/main/resources/ruleset.xml</ruleset>
                         <ruleset>rulesets/java/basic.xml</ruleset>
                         <ruleset>rulesets/java/empty.xml</ruleset>
                         <ruleset>rulesets/java/imports.xml</ruleset>
