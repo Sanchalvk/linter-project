@@ -77,6 +77,7 @@
                         <rule ref="rulesets/java/codesize.xml">
                             <exclude name="ExcessiveMethodLength"/> </rule>
                     </rules>
+                          <verbose>true</verbose>
                     <reportFormat>html</reportFormat> 
                 </configuration>
             </plugin>
