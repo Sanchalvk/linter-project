@@ -6,12 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args)
+        SpringApplication.run(DemoApplication.class, args);
         String message = "Hello, world!";
     }
 
     public static class MyClass {
-        public void myMethod() 
+        public void myMethod() {
             System.out.println("Hello");
         }
     }
