@@ -16,7 +16,7 @@ public class DemoApplication {
             int a = 10;
             int b = 20;
             int result = a + b;
-            System.out.println("Result: " + result); 
+            System.out.println("Result: " + result)
         }
     }
 }
