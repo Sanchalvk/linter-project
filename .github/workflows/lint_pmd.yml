@@ -16,6 +16,14 @@ jobs:
         with: 
           java-version: 17 
           distribution: temurin 
+          java-package: jdk
+          architecture: x64
+          check-latest: false
+          server-id: github
+          server-username: ${{ github.actor }}
+          server-password: ${{ github.token }}
+          overwrite-settings: true
+          job-status: success
  
      # - name: Run Checkstyle 
       #  run: | 
