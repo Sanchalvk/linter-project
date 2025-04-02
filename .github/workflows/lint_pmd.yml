@@ -40,22 +40,14 @@ jobs:
           java-version: 17  # Same version as above (JDK 17)
           distribution: temurin
 
-      - name: Run PMD Analysis
-        # - name: Run PMD Analysis
+      - name: Download PMD
         run: |
-          ./pmd/bin/run.sh pmd -d src/main/java -f text -R rulesets/java/basic.xml,rulesets/java/design.xml,rulesets/java/imports.xml,rulesets/java/naming.xml,rulesets/java/unusedcode.xml
-          # If you want to fail the workflow on violations, you'll need to parse the output
-          # and set the exit code accordingly. This is more complex than the Maven plugin.
+          wget https://github.com/pmd/pmd/releases/download/pmd_releases/6.55.0/pmd-bin-6.55.0.zip
+          unzip pmd-bin-6.55.0.zip
+          mv pmd-bin-6.55.0 pmd
 
-      - name: (Optional) Fail Workflow on Violations (Example - Basic Parsing)
-        id: check_pmd
-        run: |
-          violations=$(./pmd/bin/run.sh pmd -d src/main/java -f text -R rulesets/java/basic.xml,rulesets/java/design.xml,rulesets/java/imports.xml,rulesets/java/naming.xml,rulesets/java/unusedcode.xml | grep "ruleset")
-          if [[ -n "$violations" ]]; then
-            echo "::error::PMD violations found:"
-            echo "$violations"
-            exit 1
-          fi
+      - name: Run PMD Analysis
+        run: ./pmd/bin/run.sh pmd -d src/main/java -f text -R rulesets/java/basic.xml,rulesets/java/design.xml,rulesets/java/imports.xml,rulesets/java/naming.xml,rulesets/java/unusedcode.xml
           
         
     
