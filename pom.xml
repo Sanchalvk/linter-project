@@ -62,7 +62,7 @@
                         <ruleset>rulesets/java/imports.xml</ruleset>
                         <ruleset>rulesets/java/naming.xml</ruleset>
                         <ruleset>rulesets/java/unusedcode.xml</ruleset>
-
+                        <rule ref="/home/runner/work/linter-project/linter-project/target/pmd/rulesets/unusedcode.xml/UnusedLocalVariable"/>
                         </rulesets>
                     <rules>
                         <rule ref="rulesets/java/naming.xml/LongVariable">
