@@ -42,8 +42,8 @@ jobs:
           distribution: temurin
 
       - name: Run PMD Analysis
-        run: mvn pmd:pmd  # Run PMD via Maven
-        #run: mvn clean verify
+        #run: mvn pmd:pmd  # Run PMD via Maven
+        run: mvn clean verify
       
         
     
