@@ -50,7 +50,8 @@
                 <version>3.15.0</version>
                 <executions>
                     <execution>
-                        <phase>verify</phase> <goals>
+                        <phase>verify</phase>
+                        <goals>
                             <goal>check</goal>
                         </goals>
                     </execution>
@@ -65,18 +66,18 @@
                     </rulesets>
                     <rules>
                         <rule ref="category/java/bestpractices.xml/UnusedLocalVariable"/>
-                        <rule ref="rulesets/java/naming.xml/LongVariable">
+                        <rule ref="category/java/naming.xml/LongVariable">
                             <properties>
                                 <property name="minimum" value="20"/>
                             </properties>
                         </rule>
-                        <rule ref="rulesets/java/unusedcode.xml/UnusedPrivateField"/>
-                        <rule ref="rulesets/java/naming.xml/ShortMethodName">
+                        <rule ref="category/java/unusedcode.xml/UnusedPrivateField"/>
+                        <rule ref="category/java/naming.xml/ShortMethodName">
                             <properties>
                                 <property name="minimum" value="3"/>
                             </properties>
                         </rule>
-                        <rule ref="rulesets/java/codesize.xml">
+                        <rule ref="category/java/codesize.xml">
                             <exclude name="ExcessiveMethodLength"/>
                         </rule>
                     </rules>
