@@ -8,7 +8,8 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.4.4</version>
-        <relativePath/> </parent>
+        <relativePath/>
+    </parent>
 
     <groupId>com.example</groupId>
     <artifactId>demo</artifactId>
@@ -49,41 +50,41 @@
                 <version>3.15.0</version>
                 <executions>
                     <execution>
-                        <phase>validate</phase> <goals>
+                        <phase>verify</phase> <goals>
                             <goal>check</goal>
-                            <goal>pmd</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
-  <rulesets>
-    <ruleset>rulesets/java/basic.xml</ruleset>
-    <ruleset>rulesets/java/design.xml</ruleset>
-    <ruleset>rulesets/java/imports.xml</ruleset>
-    <ruleset>rulesets/java/naming.xml</ruleset>
-    <ruleset>rulesets/java/unusedcode.xml</ruleset>
-  </rulesets>
-  <rules>
-    <rule ref="/home/runner/work/linter-project/linter-project/target/pmd/rulesets/unusedcode.xml/UnusedLocalVariable"/>
-    <rule ref="rulesets/java/naming.xml/LongVariable">
-      <properties>
-        <property name="minimum" value="20"/>
-      </properties>
-    </rule>
-    <rule ref="rulesets/java/unusedcode.xml/UnusedPrivateField"/>
-    <rule ref="rulesets/java/naming.xml/ShortMethodName">
-      <properties>
-        <property name="minimum" value="3"/>
-      </properties>
-    </rule>
-    <rule ref="rulesets/java/codesize.xml">
-      <exclude name="ExcessiveMethodLength"/>
-    </rule>
-  </rules>
-  <verbose>true</verbose>
-  <reportFormat>html</reportFormat>
-  <outputDirectory>${project.build.directory}/pmd</outputDirectory>
-</configuration>
+                    <rulesets>
+                        <ruleset>rulesets/java/basic.xml</ruleset>
+                        <ruleset>rulesets/java/design.xml</ruleset>
+                        <ruleset>rulesets/java/imports.xml</ruleset>
+                        <ruleset>rulesets/java/naming.xml</ruleset>
+                        <ruleset>rulesets/java/unusedcode.xml</ruleset>
+                    </rulesets>
+                    <rules>
+                        <rule ref="category/java/bestpractices.xml/UnusedLocalVariable"/>
+                        <rule ref="rulesets/java/naming.xml/LongVariable">
+                            <properties>
+                                <property name="minimum" value="20"/>
+                            </properties>
+                        </rule>
+                        <rule ref="rulesets/java/unusedcode.xml/UnusedPrivateField"/>
+                        <rule ref="rulesets/java/naming.xml/ShortMethodName">
+                            <properties>
+                                <property name="minimum" value="3"/>
+                            </properties>
+                        </rule>
+                        <rule ref="rulesets/java/codesize.xml">
+                            <exclude name="ExcessiveMethodLength"/>
+                        </rule>
+                    </rules>
+                    <verbose>true</verbose>
+                    <reportFormat>html</reportFormat>
+                    <outputDirectory>${project.build.directory}/pmd</outputDirectory>
+                    <failOnViolation>true</failOnViolation>
+                </configuration>
             </plugin>
         </plugins>
     </build>
