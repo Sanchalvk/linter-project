@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
-        String messageTooLongAndUnnecessary = "This is a very long and unnecessary variable name to trigger a PMD rule."
+        String messageTooLongAndUnnecessary = "This is a very long and unnecessary variable name to trigger a PMD rule.";
         System.out.println("Hello, world!");
     }
 
