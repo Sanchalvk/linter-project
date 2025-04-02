@@ -79,6 +79,7 @@
                     </rules>
                           <verbose>true</verbose>
                     <reportFormat>html</reportFormat> 
+                   <outputDirectory>${project.build.directory}/pmd</outputDirectory>
                 </configuration>
             </plugin>
         </plugins>
