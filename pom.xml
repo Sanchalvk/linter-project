@@ -78,7 +78,8 @@
                         <rule ref="rulesets/java/codesize.xml">
                             <exclude name="ExcessiveMethodLength"/> </rule>
                     </rules>
-                    <reportFormat>html</reportFormat> <outputDirectory>${project.build.directory}/pmd</outputDirectory> </configuration>
+                    <reportFormat>html</reportFormat> 
+                </configuration>
             </plugin>
         </plugins>
     </build>
