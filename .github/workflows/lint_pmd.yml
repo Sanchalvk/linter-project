@@ -22,11 +22,10 @@ jobs:
        #   mvn clean checkstyle:checkstyle -Dcheckstyle.config.file=checkstyle.xml
 
       - name: Set up Maven
-        uses: actions/setup-java@v2
+        uses: s4u/setup-maven@v1.3.1
         with:
-          java-version: '17'
-          maven-version: '3.8.1'
-
+         maven-version: '3.8.1'
+ 
 
       - name: Set up Maven
         uses: actions/setup-java@v3
