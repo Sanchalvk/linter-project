@@ -41,6 +41,21 @@ jobs:
           distribution: temurin
 
       - name: Run PMD Analysis
-        run: mvn clean 
+        # - name: Run PMD Analysis
+        run: |
+          ./pmd/bin/run.sh pmd -d src/main/java -f text -R rulesets/java/basic.xml,rulesets/java/design.xml,rulesets/java/imports.xml,rulesets/java/naming.xml,rulesets/java/unusedcode.xml
+          # If you want to fail the workflow on violations, you'll need to parse the output
+          # and set the exit code accordingly. This is more complex than the Maven plugin.
+
+      - name: (Optional) Fail Workflow on Violations (Example - Basic Parsing)
+        id: check_pmd
+        run: |
+          violations=$(./pmd/bin/run.sh pmd -d src/main/java -f text -R rulesets/java/basic.xml,rulesets/java/design.xml,rulesets/java/imports.xml,rulesets/java/naming.xml,rulesets/java/unusedcode.xml | grep "ruleset")
+          if [[ -n "$violations" ]]; then
+            echo "::error::PMD violations found:"
+            echo "$violations"
+            exit 1
+          fi
+          
         
     
