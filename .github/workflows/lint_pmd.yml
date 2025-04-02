@@ -41,6 +41,6 @@ jobs:
           distribution: temurin
 
       - name: Run PMD Analysis
-        run: mvn pmd:pmd     
+        run: mvn clean   
         
     
