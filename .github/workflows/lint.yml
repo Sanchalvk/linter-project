@@ -1,4 +1,4 @@
-name: Lint Spring Boot Project 
+name: checkstyle
 on: 
   push: 
     branches: [ main ] 
