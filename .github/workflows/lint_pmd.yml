@@ -1,4 +1,4 @@
-name: Lint Spring Boot Project 
+name: pmd
 on: 
   push: 
     branches: [ main ] 
