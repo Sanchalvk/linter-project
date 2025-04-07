@@ -12,11 +12,11 @@ public class DemoApplication {
     }
 
     public static class MyClass {
-        public void doSomethingVeryComplicated() { // Method name is quite long
+        public void addition() { // Method name is quite long
             int a = 10;
             int b = 20;
             int result = a + b;
-            System.out.println("Result: " + result);
+            System.out.println("Result: " + result)
         }
     }
 }
