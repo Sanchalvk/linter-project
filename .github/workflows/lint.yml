@@ -19,4 +19,4 @@ jobs:
  
       - name: Run Checkstyle 
         run: | 
-          mvn clean checkstyle:checkstyle -Dcheckstyle.config.file=checkstyle.xml 
+          mvn clean checkstyle:checkstyle 
