@@ -20,18 +20,23 @@ public class DemoApplication {
         }
     }
 
-    public void processData(int value) {
-        if (value > 0) {
-            if (value < 10) {
-                if (value % 2 == 0) {
-                    if (value != 4) {
-                        if (value == 2) {
-                            // ... very specific logic ...
-                        }
-                    }
-                }
-            }
+    public class ErrorHandlingClass {
+    public void readFile(String filename) {
+        try {
+            // ... code that might throw IOException ...
+        } catch (java.io.IOException e) {
+            // Ignoring the exception! This is bad.
         }
     }
+}
+
+
+    public class CalculationClass {
+    public int calculateSomething(int a, int b) {
+        int sum = a + b;
+        int difference = a - b; // 'difference' is declared but never used
+        return sum;
+    }
+}
 
 }
