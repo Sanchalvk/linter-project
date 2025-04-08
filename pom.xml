@@ -57,26 +57,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <rulesets>
-                        <ruleset>rulesets/java/basic.xml</ruleset>
-                        <ruleset>rulesets/java/design.xml</ruleset>
-                        <ruleset>rulesets/java/imports.xml</ruleset>
-                        <ruleset>rulesets/java/naming.xml</ruleset>
-                        <ruleset>rulesets/java/unusedcode.xml</ruleset>
-                    </rulesets>
-                   <rules>
-                    <rule ref="category/java/naming.xml/LongVariable">
-                        <properties>
-                            <property name="minimum" value="25"/> </properties>
-                    </rule>
-                    <rule ref="category/java/bestpractices.xml/UnusedLocalVariable">
-                        <exclude name="UnusedLocalVariable"/>
-                    </rule>
-                    <rule ref="category/java/naming.xml/ShortVariable">
-                        <properties>
-                            <property name="minimum" value="2"/> </properties>
-                    </rule>
-                </rules>
+                   
                     <verbose>true</verbose>
                     <reportFormat>html</reportFormat>
                     <outputDirectory>${project.build.directory}/pmd</outputDirectory>
