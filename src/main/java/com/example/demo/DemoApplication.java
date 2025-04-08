@@ -19,4 +19,19 @@ public class DemoApplication {
             System.out.println("Result: " + result);
         }
     }
+
+    public void processData(int value) {
+        if (value > 0) {
+            if (value < 10) {
+                if (value % 2 == 0) {
+                    if (value != 4) {
+                        if (value == 2) {
+                            // ... very specific logic ...
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
