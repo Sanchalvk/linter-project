@@ -63,7 +63,7 @@ jobs:
                   </properties>
               </rule>
               <rule ref="rulesets/java/unusedcode.xml">
-                  <exclude name="UnusedLocalVariable"/>
+                  #<exclude name="UnusedLocalVariable"/>
               </rule>
           </ruleset>
           EOF
