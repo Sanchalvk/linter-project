@@ -47,12 +47,12 @@ jobs:
                     xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/xsd/ruleset_2_0_0.xsd">
               <description>Custom PMD ruleset to check long and short variable names.</description>
 
-              <rule ref="rulesets/java/naming.xml/LongVariable">
+              <rule ref="rulesets/java/naming.xml">
+                  <exclude name="LongVariable"/>
                   <properties>
                       <property name="minimum" value="25"/>
                   </properties>
-              </rule>
-              <rule ref="rulesets/java/naming.xml/ShortVariable">
+                  <exclude name="ShortVariable"/>
                   <properties>
                       <property name="minimum" value="2"/>
                   </properties>
