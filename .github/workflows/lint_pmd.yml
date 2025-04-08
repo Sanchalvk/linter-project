@@ -61,7 +61,7 @@ jobs:
           EOF
 
       - name: Run PMD Analysis for Variable Naming
-        run: ./pmd/bin/run.sh pmd -d src/main/java -f text -R custom-pmd-ruleset.xml
+        run: ./pmd/bin/run.sh pmd -d src/main/java -f text -R custom-pmd-ruleset.xml,rulesets/java/empty.xml
 
       # Optional: Fail the workflow if PMD finds any violations
       - name: Fail if PMD violations are found
