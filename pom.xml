@@ -80,6 +80,12 @@
                         <rule ref="category/java/codesize.xml">
                             <exclude name="ExcessiveMethodLength"/>
                         </rule>
+                        <rule ref="category/java/design.xml/UseUtilityClass">
+                            <exclude name="UseUtilityClass"/>
+                        </rule>
+                        <rule ref="category/java/naming.xml/ShortVariable">
+                            <exclude name="ShortVariable"/>
+                        </rule>
                     </rules>
                     <verbose>true</verbose>
                     <reportFormat>html</reportFormat>
