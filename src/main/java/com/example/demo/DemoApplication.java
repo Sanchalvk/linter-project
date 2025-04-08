@@ -2,6 +2,8 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import java.util.ArrayList; // This import is likely unused in this specific snippet
+import java.util.List;    // This import might be used
 
 @SpringBootApplication
 public class DemoApplication {
