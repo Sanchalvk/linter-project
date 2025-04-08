@@ -65,26 +65,22 @@
                         <ruleset>rulesets/java/unusedcode.xml</ruleset>
                     </rulesets>
                     <rules>
-                        <rule ref="category/java/bestpractices.xml/UnusedLocalVariable"/>
-                        <rule ref="category/java/naming.xml/LongVariable">
-                            <properties>
-                                <property name="minimum" value="20"/>
-                            </properties>
-                        </rule>
-                        <rule ref="category/java/unusedcode.xml/UnusedPrivateField"/>
-                        <rule ref="category/java/naming.xml/ShortMethodName">
-                            <properties>
-                                <property name="minimum" value="3"/>
-                            </properties>
-                        </rule>
-                        <rule ref="category/java/codesize.xml">
-                            <exclude name="ExcessiveMethodLength"/>
-                        </rule>
                         <rule ref="category/java/design.xml/UseUtilityClass">
                             <exclude name="UseUtilityClass"/>
                         </rule>
+                        <rule ref="category/java/naming.xml/LongVariable">
+                            <properties>
+                                <property name="minimum" value="25"/> </properties>
+                        </rule>
+                        <rule ref="category/java/bestpractices.xml/UnusedLocalVariable">
+                            <exclude name="UnusedLocalVariable"/>
+                        </rule>
                         <rule ref="category/java/naming.xml/ShortVariable">
-                            <exclude name="ShortVariable"/>
+                            <properties>
+                                <property name="minimum" value="2"/> </properties>
+                        </rule>
+                        <rule ref="category/java/codesize.xml">
+                            <exclude name="ExcessiveMethodLength"/>
                         </rule>
                     </rules>
                     <verbose>true</verbose>
