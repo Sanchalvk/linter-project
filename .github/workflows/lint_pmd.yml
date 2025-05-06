@@ -47,12 +47,5 @@ jobs:
 
       - name: Run PMD Analysis
         id: pmd-analysis
-        run: |
-          ./pmd/bin/run.sh pmd -d src/main/java -f text -R custom-pmd-ruleset.xml > pmd-report.txt
-          cat pmd-report.txt
-          if grep -q "^\[.*\] " pmd-report.txt; then
-            echo "PMD violations found."
-            exit 1
-          else
-            echo "No PMD violations found."
-          fi
+        run: ./pmd/bin/run.sh pmd -d src/main/java -f text -R custom-pmd-ruleset.xml,rulesets/java/empty.xml
+
