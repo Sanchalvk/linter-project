@@ -2,19 +2,16 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import java.util.ArrayList; // This import is likely unused in this specific snippet
-import java.util.List;    // This import might be used
 
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
-        String messageTooLongAndUnnecessary = "This is a very long and unnecessary variable name to trigger a PMD rule.";
         System.out.println("Hello, world!");
     }
 
     public static class MyClass {
-        public void addition() { // Method name is quite long
+        public void printAdditionResult() {
             int a = 10;
             int b = 20;
             int result = a + b;
@@ -23,22 +20,19 @@ public class DemoApplication {
     }
 
     public class ErrorHandlingClass {
-    public void readFile(String filename) {
-        try {
-            // ... code that might throw IOException ...
-        } catch (java.io.IOException e) {
-            // Ignoring the exception! This is bad.
+        public void readFile(String filename) {
+            try {
+                // Simulate code that might throw IOException
+            } catch (java.io.IOException e) {
+                System.err.println("Failed to read file: " + filename);
+                e.printStackTrace(); // Proper logging instead of ignoring
+            }
         }
     }
-}
-
 
     public class CalculationClass {
-    public int calculateSomething(int a, int b) {
-        int sum = a + b;
-        int difference = a - b; // 'difference' is declared but never used
-        return sum;
+        public int calculateSum(int a, int b) {
+            return a + b; // Removed unused 'difference' variable
+        }
     }
-}
-
 }
