@@ -1,0 +1,15 @@
+name: On Pull Request Opened
+
+on:
+  pull_request:
+    branches: [ main]
+
+jobs: 
+  Checkstyle:
+    name: checkstyle
+    uses: ./.github/workflows/lint.yml
+
+  Pmd:
+    name: pmd
+    needs: Checkstyle
+    uses: ./.github/workflows/lint_pmd.yml
