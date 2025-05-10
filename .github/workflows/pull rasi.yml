@@ -2,9 +2,9 @@ name: On Pull Request or Push to Main
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ pmd_debug ]
   push:
-    branches: [pmd_debug ]
+    branches: [ main ]
 
 jobs:
   lint:
