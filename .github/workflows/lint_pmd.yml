@@ -2,7 +2,7 @@ name: pmd
 on:
   push:
     branches: [ main ]
-
+  workflow_call:
 jobs:
   lint:
     runs-on: ubuntu-latest
