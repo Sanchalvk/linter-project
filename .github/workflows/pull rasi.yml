@@ -1,14 +1,16 @@
-name: On Pull Request Opened
+name: On Pull Request or Push to Main
 
 on:
   pull_request:
+    branches: [ main ]
+  push:
     branches: [ main ]
 
 jobs:
   lint:
     name: Lint Debug Variant
-    uses: ./.github/workflows/job_lint_debug.yml
+    uses: ./.github/workflows/lint.yml
 
   test:
     name: Test Debug Variant
-    uses: ./.github/workflows/job_test_debug.yml
+    uses: ./.github/workflows/lint_pmd.yml
