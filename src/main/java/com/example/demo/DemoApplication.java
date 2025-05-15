@@ -3,6 +3,10 @@ package com.example.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {
@@ -19,20 +23,23 @@ public class DemoApplication {
         }
     }
 
-    public class ErrorHandlingClass {
+    public static class ErrorHandlingClass {
         public void readFile(String filename) {
-            try {
-                // Simulate code that might throw IOException
-            } catch (java.io.IOException e) {
+            try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    System.out.println(line);
+                }
+            } catch (IOException e) {
                 System.err.println("Failed to read file: " + filename);
-                e.printStackTrace(); // Proper logging instead of ignoring
+                e.printStackTrace(); // Proper logging
             }
         }
     }
 
-    public class CalculationClass {
+    public static class CalculationClass {
         public int calculateSum(int a, int b) {
-            return a + b; // Removed unused 'difference' variable
+            return a + b;
         }
     }
 }
