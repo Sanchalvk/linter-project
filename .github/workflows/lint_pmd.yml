@@ -57,11 +57,11 @@ jobs:
             </ruleset>
             EOF
 
-
       - name: Run PMD Analysis
         id: pmd-analysis
-        run: ./pmd/bin/run.sh pmd -d src/main/java -f text -R custom-pmd-ruleset.xml
+        run: |
+          ./pmd/bin/run.sh pmd -d src/main/java -f text -R custom-pmd-ruleset.xml || exit 1
 
       - name: Fail if PMD violations are found
-        if: steps.pmd-analysis.outcome == 'failure'
+        if: ${{ steps.pmd-analysis.outcome == 'failure' }}
         run: exit 1
